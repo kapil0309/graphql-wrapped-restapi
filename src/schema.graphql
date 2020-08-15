@@ -1,20 +1,29 @@
 type Query {
-  users: [User!]!
-  user(id: ID!): User
-  posts: [Post!]!
-  post(id: ID!): Post
+  students: [Student!]!
+  student(rollNumber: String): Student
+  marks(rollNumber: String): Marks
+ 
 }
 
-type User {
-  id: ID!
+type Student {
+  rollNumber: String!
   name: String!
-  posts: [Post!]!
+  dob: String!
+  
 }
 
-type Post {
-  id: ID!
-  title: String!
-  content: String!
-  published: Boolean!
-  author: User!
+type Marks {
+        
+        name: String!
+        rollNumber: String!
+        maths: String!
+        english: String!
+        physics: String!
+      
+    
 }
+
+
+
+
+  
